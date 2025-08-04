@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic meta tags for character set and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title that appears in browser tab -->
+    <title>Parking Management System | Home</title>
+    
+    <!-- Linking our main CSS file -->
+    <link rel="stylesheet" href="D:\2nd semester project\Vehicle Parking system\styles\style.css">
+    
+    <!-- Favicon would go here if we had one -->
+    <!-- <link rel="icon" href="images/favicon.ico"> -->
+</head>
+<body>
+    <!-- Background container with our BHFOX BEACON image -->
+    <div class="background-img"></div>
+    
+    <!-- Main content container that holds everything -->
+    <div class="container">
+        <!-- Header section with title and subtitle -->
+        <header>
+            <h1>Parking System</h1>
+            <p>Technologies for Web Development</p>
+        </header>
+        
+        <!-- Main content area -->
+        <main>
+            <!-- Introduction text -->
+            <section class="intro">
+                <p>Welcome to the Parking Management System. 
+                Select your role below to continue.</p>
+            </section>
+            
+            <!-- Card container for role selection -->
+            <div class="card-container">
+                <!-- Admin Card -->
+                <div class="card" onclick="window.location.href='admin.html'">
+                    <h2>Administrator</h2>
+                    <p>Manage parking slots and view system reports</p>
+                    <!-- Using emoji as simple icon -->
+                    <div class="card-icon">👨‍💼</div>
+                </div>
+                
+                <!-- Operator Card -->
+                <div class="card" onclick="window.location.href='operator.html'">
+                    <h2>Parking Operator</h2>
+                    <p>Register vehicles and manage parking</p>
+                    <!-- Using emoji as simple icon -->
+                    <div class="card-icon">👮‍♂️</div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer with student information -->
+        <footer>
+            <p>Submitted by: Sasindi</p>
+            <p>Index No: UOG1124018</p>
+        </footer>
+    </div>
+</body>
+</html>

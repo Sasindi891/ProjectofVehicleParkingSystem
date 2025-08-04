@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Descriptive title for the admin page -->
+    <title>Admin Portal | Parking System</title>
+    
+    <!-- Linking our CSS files -->
+    <link rel="stylesheet" href="D:\2nd semester project\Vehicle Parking system\styles\style.css">
+    <link rel="stylesheet" href="D:\2nd semester project\Vehicle Parking system\styles\admin.css">
+    
+    <!-- Chart.js for the reports section -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Same background image as homepage -->
+    <div class="background-img"></div>
+    
+    <!-- Back button to return to homepage -->
+    <button class="back-btn" onclick="window.location.href='index.html'">
+        ← Back to Home
+    </button>
+    
+    <!-- Main container for content -->
+    <div class="container">
+        <!-- Page header -->
+        <header>
+            <h1>Administrator Portal</h1>
+            <p>Manage parking slots and view system reports</p>
+        </header>
+        
+        <!-- Main content area with tabs -->
+        <main>
+            <!-- Tab navigation - shows which section is active -->
+            <nav class="tabs">
+                <button class="tab-btn active" data-tab="slots">Manage Slots</button>
+                <button class="tab-btn" data-tab="vehicles">Parked Vehicles</button>
+                <button class="tab-btn" data-tab="reports">Earnings Reports</button>
+            </nav>
+            
+            <!-- Tab 1: Parking Slot Management -->
+            <section id="slots" class="tab-content active">
+                <h2>Parking Slot Management</h2>
+                
+                <!-- Form to add/remove slots -->
+                <div class="slot-form">
+                    <input type="text" id="slot-id" placeholder="Enter slot number (e.g., A1)">
+                    <div class="form-buttons">
+                        <button id="add-slot" class="primary-btn">Add Slot</button>
+                        <button id="remove-slot" class="secondary-btn">Remove Slot</button>
+                    </div>
+                </div>
+                
+                <!-- Display of all parking slots -->
+                <div class="slot-grid" id="slot-container">
+                    <!-- Slots will be added here by JavaScript -->
+                    <p class="loading-msg">Loading parking slots...</p>
+                </div>
+            </section>
+            
+            <!-- Tab 2: Parked Vehicles -->
+            <section id="vehicles" class="tab-content">
+                <h2>Currently Parked Vehicles</h2>
+                
+                <!-- Table to display parked vehicles -->
+                <div class="table-container">
+                    <table id="vehicles-table">
+                        <thead>
+                            <tr>
+                                <th>Slot No</th>
+                                <th>Vehicle No</th>
+                                <th>Type</th>
+                                <th>Entry Time</th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data will be inserted by JavaScript -->
+                            <tr class="empty-row">
+                                <td colspan="5">No vehicles currently parked</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Tab 3: Earnings Reports -->
+            <section id="reports" class="tab-content">
+                <h2>Earnings Reports</h2>
+                
+                <!-- Summary cards showing key metrics -->
+                <div class="report-cards">
+                    <div class="metric-card">
+                        <h3>Today's Earnings</h3>
+                        <p class="metric-value">$0.00</p>
+                        <p class="metric-change">+0% from yesterday</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Weekly Earnings</h3>
+                        <p class="metric-value">$0.00</p>
+                        <p class="metric-change">+0% from last week</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Total Earnings</h3>
+                        <p class="metric-value">$0.00</p>
+                        <p class="metric-change">All time</p>
+                    </div>
+                </div>
+                
+                <!-- Chart container for visual data -->
+                <div class="chart-container">
+                    <canvas id="earnings-chart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Linking JavaScript files -->
+    <script src="D:\2nd semester project\Vehicle Parking system\scripts\main.js"></script>
+    <script src="D:\2nd semester project\Vehicle Parking system\scripts\admin.js"></script>
+</body>
+</html>
